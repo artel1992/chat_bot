@@ -163,3 +163,4 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
+AUTHENTICATION_BACKENDS =  ['django.contrib.auth.backends.AllowAllUsersModelBackend']

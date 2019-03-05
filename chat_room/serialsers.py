@@ -19,11 +19,11 @@ class ChatSerializers(serializers.ModelSerializer):
     user = UserSerializer()
     class Meta:
         model = Chat
-        fields = ('room', 'user', 'date','text')
+        fields = ('user', 'date','text')
 
 
 class ChatSerializersPOST(serializers.ModelSerializer):
     class Meta:
         model = Chat
-        fields = ('room','text')
+        fields = ('text','room')
 
