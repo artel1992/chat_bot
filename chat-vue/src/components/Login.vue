@@ -9,7 +9,6 @@
 </template>
 
 <script>
-    import $ from 'jquery'
     export default {
         name: "Login",
         data(){
@@ -30,6 +29,7 @@
                     success:(response) =>{
                         alert('Вход выполнен успешно');
                         sessionStorage.setItem('auth_token',response.data.attributes.auth_token);
+                        this.$router.push({name:'home'})
                     },
                     error:(response) =>{
                         if (response.status == 400) {
@@ -37,7 +37,7 @@
                             alert('Неверный логин либо пароль')
                         }
                     }
-                })
+                });
             }
         }
 

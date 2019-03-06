@@ -14,7 +14,7 @@ class RoomSerializers(serializers.ModelSerializer):
     invited = UserSerializer(many=True)
     class Meta:
         model = Rooms
-        fields = ('creater','invited','date')
+        fields = ('creater','invited','date','id')
 class ChatSerializers(serializers.ModelSerializer):
     user = UserSerializer()
     class Meta:
